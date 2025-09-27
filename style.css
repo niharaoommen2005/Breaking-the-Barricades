@@ -1,0 +1,119 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  font-family: 'Marcellus SC', serif;
+  scroll-behavior: smooth;
+  color: white;
+  background-color: black;
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 15px 0;
+  z-index: 1000;
+}
+
+.navbar a {
+  color: rgb(167, 128, 31);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: 0.3s ease;
+}
+
+.navbar a:hover {
+  color: white;
+}
+
+/* Section background images */
+#home     { background-image: url('images/mainpage.jpg'); }
+#moulin   { background-image: url('images/moulinrougemain.jpg'); }
+#lesmis   { background-image: url('images/lesmismain.jpg'); }
+#tintin   { background-image: url('images/tintinmainpage.jpg'); }
+#phantom  { background-image: url('images/phantommain.jpg'); }
+#hunchback{ background-image: url('images/hunchbackmain.jpeg'); }
+#amelie   { background-image: url('images/ameliemain.jpg'); }
+
+/* General section styling */
+.section {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+}
+
+.section .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.section .content {
+  position: relative;
+  text-align: center;
+  z-index: 1;
+  padding: 20px;
+}
+
+.section h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: rgb(167, 128, 31);
+}
+
+.section p {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Portrait mode */
+.section.portraits {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: black;
+}
+
+.section.portraits .overlay,
+.section.portraits .content {
+  display: none;
+}
+
+.section.portraits .portrait-gallery {
+  display: flex;
+  gap: 20px;
+  z-index: 1;
+}
+
+.section.portraits .portrait-gallery img {
+  width: 400px;
+  height: 600px;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(218, 165, 32, 0.7);
+  transition: transform 0.3s ease;
+}
+
+.section.portraits .portrait-gallery img:hover {
+  transform: scale(1.05);
+}
